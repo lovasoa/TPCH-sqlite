@@ -6,4 +6,7 @@ script: make
 os:
   - linux
   - osx
-
+addons:
+  apt:
+    packages:
+    - sqlite3
