@@ -10,12 +10,12 @@ sqlite3 "$db" < sqlite-ddl.sql
 
 echo $sqlite;
 
-for t in $TABLES; do
-	echo "Importing table '$t'..." >&2
+for table in $TABLES; do
+	echo "Importing table '$table'..." >&2
 	(
 		echo ".mode csv";
 		echo ".separator |";
-		echo -n ".import tpch-dbgen/$t.tbl ";
-		echo $t | tr a-z A-Z;
+		echo -n ".import tpch-dbgen/$table.tbl ";
+		echo $table | tr a-z A-Z;
 	) | sqlite3 "$db" 2>/dev/null
 done
