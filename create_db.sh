@@ -24,13 +24,16 @@ for table in $TABLES; do
 		continue
 	fi
 
+	fifo=$(mktemp -u)
+	mkfifo $fifo
+	sed -e 's/|$//' < "$data_file" > "$fifo" &
 	(
 		echo ".mode csv";
 		echo ".separator |";
-		echo -n ".import /dev/stdin ";
+		echo -n ".import $fifo ";
 		echo $table | tr a-z A-Z;
-		sed -e 's/|$//' < "$data_file"
 	) | sqlite3 "$db"
+	rm $fifo
 
 	if [ $? != 0 ]; then
 		echo "Import failed." >&2
