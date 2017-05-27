@@ -5,7 +5,9 @@ It uses the official [tpch-dbgen](https://github.com/electrum/tpch-dbgen) tool t
 
 ## Download the database
 
-If you don’t want to generate the database yourself, you can download it from the **realeases** section of this github repo.
+If you don’t want to generate the database yourself, you can download it from the **realeases** section of this github repo:
+
+### [TPC-H.db](https://github.com/lovasoa/TPCH-sqlite/releases/download/v1.0/TPC-H.db)
 
 ## How to use
 
