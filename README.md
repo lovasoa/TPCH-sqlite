@@ -7,7 +7,9 @@ It uses the official [tpch-dbgen](https://github.com/electrum/tpch-dbgen) tool t
 
 If you don’t want to generate the database yourself, you can download it from the **realeases** section of this github repo.
 
-### [TPC-H.db](https://github.com/lovasoa/TPCH-sqlite/releases/download/v1.0/TPC-H.db)
+ * [TPC-H.db](https://github.com/lovasoa/TPCH-sqlite/releases/download/v1.0/TPC-H.db). This is a conforming TPC-H database with a scale factor of 1. The database file size is **1.17 GB**.
+ * [TPC-H-small.db](https://github.com/lovasoa/TPCH-sqlite/releases/download/v1.0/TPC-H.db). This database does not conform to the standard, as it has a scale factor of 0.01, but it is much smaller: **11.6 MB**.
+
 
 ## How to use
 
