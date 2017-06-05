@@ -6,7 +6,7 @@ TPC-H.db: $(TABLE_FILES)
 	./create_db.sh $(TABLES)
 
 $(TABLE_FILES): tpch-dbgen/dbgen
-	cd tpch-dbgen && ./dbgen -f -s $(SCALE_FACTOR)
+	cd tpch-dbgen && ./dbgen -v -f -s $(SCALE_FACTOR)
 
 tpch-dbgen/dbgen: tpch-dbgen/makefile
 	cd tpch-dbgen && $(MAKE)
