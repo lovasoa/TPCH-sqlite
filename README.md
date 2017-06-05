@@ -1,11 +1,11 @@
 # TPCH-sqlite [![Build Status](https://travis-ci.org/lovasoa/TPCH-sqlite.svg?branch=master)](https://travis-ci.org/lovasoa/TPCH-sqlite)
 
-This small shell script that generates an sqlite3 database following the [TPC-H standard](http://www.tpc.org/tpch/).
+This is a small shell script that generates an SQLite3 database following the [TPC-H standard](http://www.tpc.org/tpch/).
 It uses the official [tpch-dbgen](https://github.com/electrum/tpch-dbgen) tool to generate the data, and then imports it into an sqlite database.
 
 ## Download the database
 
-If you don’t want to generate the database yourself, you can download it from the **realeases** section of this github repo:
+If you don’t want to generate the database yourself, you can download it from the **realeases** section of this github repo.
 
 ### [TPC-H.db](https://github.com/lovasoa/TPCH-sqlite/releases/download/v1.0/TPC-H.db)
 
