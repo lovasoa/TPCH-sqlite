@@ -7,6 +7,7 @@ TPC-H.db: $(TABLE_FILES)
 
 $(TABLE_FILES): tpch-dbgen/dbgen
 	cd tpch-dbgen && ./dbgen -v -f -s $(SCALE_FACTOR)
+	chmod +r $(TABLE_FILES)
 
 tpch-dbgen/dbgen: tpch-dbgen/makefile
 	cd tpch-dbgen && $(MAKE)
